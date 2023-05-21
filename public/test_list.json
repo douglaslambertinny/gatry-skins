@@ -1,0 +1,18 @@
+{
+    "name": "AK-47 | Redline",
+    "price": 1.50,
+    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_cu_ak47_redline_light_large.3c8e0a3a0e2e2e3a2b0b0e2e2e2e2e2e2e2e2e2e.png",
+    "float": 0.06,
+    "type": "Rifle",
+    "weapon": "AK-47",
+    "rarity": "Classified",
+    "description": "Powerful and reliable, the AK-47 is one of the most popular assault rifles in the world. It is most deadly in short, controlled bursts of fire. It has been custom painted with a red and black design. Carmen. I found him...- The Oni and The Valkyrie Part 1",
+    "collection": "The eSports 2013 Collection",
+    "link": "https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Redline%20%28Field-Tested%29",
+    "exterior": "Field-Tested",
+    "phase": "Phase 2",
+    "stattrak": false,
+    "souvenir": false,
+    "discount": 0
+}
+
