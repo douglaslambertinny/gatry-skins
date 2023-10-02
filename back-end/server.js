@@ -12,6 +12,7 @@ const routes = {
   '/contact': path.join(file_path, 'contact.html'),
   '/css/styles.css': path.join(file_path, 'css/styles.css'),
   '/css/logo.png': path.join(file_path, 'css/logo.png'),
+  '/index.js': path.join(file_path, 'index.js'),
 };
 
 // Servidor HTTP
