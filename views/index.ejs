@@ -38,31 +38,31 @@
       </div>
 
       <section class="promotion">
+        <% data.data.forEach(item => { %>
           <div class="container-card">
             <div class="image-card">
               <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf3qr3czxb49KzgL-Khsj7OrfUklRc7cF4n-SPo9-n0QSyqUo_ZWuhJtDHIQFtaA7SrwDrxuvthJW8uJuYn3Rlu3Yj7WGdwUL86I2c2w/256fx256f" alt="logo">
             </div>
             <div class="content-card">
               <div class="title">
-                Baioneta M9 (★) | Aquecimento de Aço
+                <%= item.name %>
               </div>
               <div class="amount-card">
                 <div class="title2">
-                  Baioneta M9 (★) | Aquecimento de Aço
+                  <%= item.phase %> <%= item.collection %> <%= item.type %> - <%= item.rarity %>
                 </div>
                 <div class="discount-card">
-                  -15
+                  <%= item.discount %>
                 </div>
-                
                 <div class="price-card">
-                    R$3.150,00 
+                    R$<%= item.price %>
                 </div>
                 <div class="exterior-card">
-                  <p>Bem Desgastada Oculto</p>
+                  <%= item.exterior %>
                 </div>
               </div>
               <div class="float">
-                0.00011
+                <%= item.float %>
               </div>
               <div class="footer-card">
                 <!-- Coment -->
@@ -72,14 +72,14 @@
                 <button type="submit">
                    Ir Dashskins
                 </button>
-                </p>
               </div>
             </div>
           </div>
+        <% }); %>
       </section>
     </div>
     <footer>
     </footer>
   </body>
-  <script src="/index.js"></script>
+  <!-- <script src="/index.js"></script> -->
 </html>

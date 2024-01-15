@@ -14,7 +14,7 @@ const routes = {
   '/css/logo.png': path.join(file_path, 'css/logo.png'),
   '/index.js': path.join(file_path, 'index.js'),
 };
-
+                  
 // Servidor HTTP
 const server = http.createServer((req, res) => {
   const filePath = routes[req.url];
