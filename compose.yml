@@ -1,0 +1,30 @@
+#Mongoose
+services:
+  mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: gatryskins
+      MONGO_INITDB_ROOT_PASSWORD: MongoDB2023!
+    ports:
+      - "27017:27017"
+    volumes:
+      - db:/data/db
+
+  # gatry-skins:
+  #   build: ./Dockerfile
+  #   command: ["node", "app.js"]
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - MONGO_URL=mongodb://root:MongoDB2023!@mongodb:27017/gatry-skins?authSource=admin
+  #     - ROOT_URL=http://localhost:3000
+  #     - PORT=3000
+  #   volumes:
+  #     - .:/app
+volumes:
+  odoo: null
+  db: null
+    
+
+    
+

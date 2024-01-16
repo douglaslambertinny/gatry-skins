@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const skin = new Schema({
+const skinSchema = new Schema({
   name: String,
   price: Number,
   image: String,
@@ -19,3 +19,6 @@ const skin = new Schema({
   discount: Number,
   weapon: String,
 });
+
+// Export the model
+module.exports = mongoose.model("Skin", skinSchema);
