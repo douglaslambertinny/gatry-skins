@@ -1,0 +1,15 @@
+<!-- coupons -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Coupons</h1>
+      <p>Here are the coupons that are currently available:</p>
+      <ul>
+        <% coupons.forEach(function(coupon) { %>
+          <li>
+            <strong><%= coupon.name %></strong> - <%= coupon.description %>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+  </div>

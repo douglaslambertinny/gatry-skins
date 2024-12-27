@@ -15,3 +15,13 @@ npm install
 ```shell
 node app.js
 ```
+
+documento de estudo
+
+[MVC Example](https://github.com/steveygfromao/node-ejs-express-mvc/blob/main/app.js)
+
+[App example](https://github.com/mde/ejs/blob/main/examples/express/app.js)
+
+[Building a app](https://blog.logrocket.com/building-structuring-node-js-mvc-application/)
+
+https://github.com/Jon-Peppinck/angular-node-mysql-crud/tree/master

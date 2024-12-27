@@ -1,26 +1,20 @@
-const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const { DataTypes, Model } = require("sequelize");
 
-const userSchema = new Schema({
-  name: String,
-  email: String,
-  password: String,
-  createdAt: { type: Date, default: Date.now },
-});
-
-const User = mongoose.model("User", userSchema);
-
-function CreateUser(name, email, password) {
-  return new User({
-    name: name,
-    email: email,
-    password: password,
+const User = (sequelize) => {
+  sequelize.define("user", {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   });
-}
-
-if (User.find({}).length == 0) {
-  const userAdmin = new CreateUser("Admin", "admin@example.com", "admin");
-  userAdmin.save();
-}
-
- module.exports = User
+};
+module.exports = User;

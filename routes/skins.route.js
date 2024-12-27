@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-
 // Colocar controller que ainda não foi criado
-const index_controller = require("../controllers/index.controller");
+const skins_controller = require("../controllers/skins.controller");
 // teste simples
-router.get("/", index_controller.test);
+router.get("/new", skins_controller.getSkins);
 module.exports = router;

@@ -1,30 +1,25 @@
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
-
-async function main() {
-  await mongoose.connect(
-    "mongodb://127.0.0.1:27017/gatry-skins-app"
-  );
-    console.log("Conectado ao MongoDB");
-  }
+const db = require("./db");
 
 // all environments
-app.use(express.urlencoded({ extended: true }));
-app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public")); 
-app.set('port', process.env.PORT || 3000);
-app.set('path_data', __dirname + "/public/load_data.json");
+app.set('port', process.env.PORT || 3100);
+
+// Database connection and seeding
+async function main() {
+  await db.run();
+}
+
+// Routes
+app.use("/", require("./routes/index.route"));
 
 
-// routing
-require('./controllers/index.controller.js')(app);
-
-const port = app.get("port");
-
-main().catch((err) => console.log(err));
-
+// Server setup
+var port = app.get('port');
 app.listen(port, () => {
+  main().catch((err) => console.log(err));
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
