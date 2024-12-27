@@ -1,85 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    
-    <title>Gatry skins</title>
-  </head>
-  <body>
-    <header class="header">
-        <div class="logo">
-          <img src="https://i.postimg.cc/HscDtzCp/logo.png" alt="logo">
-        </div>
 
-        <nav class="menu">
-            <ul>
-            <li>
-                <a href="/promocoes">Promoções</a>
-            </li>
-            </ul>
-            <ul>
-            <li>
-                <a href="/contato">Contato</a>
-            </li>
-            </ul>
-            <ul>
-            <li>
-                <a href="/cupons">Cupons</a>
-            </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-      <div class="search">
-        <input type="text" name="q" placeholder="Pesquisar Skins">
-      </div>
+<div>
+<%-include('./layout.ejs', {
+  body: include('./body.ejs'),
+  footer: include('./footer.ejs')
+})%>
+</div>
 
-      <section class="promotion">
-        <% data.data.forEach(item => { %>
-          <div class="container-card">
-            <div class="image-card">
-              <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf3qr3czxb49KzgL-Khsj7OrfUklRc7cF4n-SPo9-n0QSyqUo_ZWuhJtDHIQFtaA7SrwDrxuvthJW8uJuYn3Rlu3Yj7WGdwUL86I2c2w/256fx256f" alt="logo">
-            </div>
-            <div class="content-card">
-              <div class="title">
-                <%= item.name %>
-              </div>
-              <div class="amount-card">
-                <div class="title2">
-                  <%= item.phase %> <%= item.collection %> <%= item.type %> - <%= item.rarity %>
-                </div>
-                <div class="discount-card">
-                  <%= item.discount %>
-                </div>
-                <div class="price-card">
-                    R$<%= item.price %>
-                </div>
-                <div class="exterior-card">
-                  <%= item.exterior %>
-                </div>
-              </div>
-              <div class="float">
-                <%= item.float %>
-              </div>
-              <div class="footer-card">
-                <!-- Coment -->
-                <button type="button">
-                  Comentários
-                </button>
-                <button type="submit">
-                   Ir Dashskins
-                </button>
-              </div>
-            </div>
-          </div>
-        <% }); %>
-      </section>
-    </div>
-    <footer>
-    </footer>
-  </body>
-  <!-- <script src="/index.js"></script> -->
-</html>
+<hr>
+
+<div>
+<%-include('./layout.ejs', {
+  footer: include('./footer.ejs')
+})%>
+</div>

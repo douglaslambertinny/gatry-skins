@@ -1,7 +1,20 @@
 {
+  "name": "gatry-skins-app",
+  "description": "A simple app to finded your skins",
+  "main": "app.js",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "mongoose": "^8.0.4"
+    "pg": "^8.11.5",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
   }
 }

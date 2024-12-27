@@ -1,0 +1,20 @@
+<ul>
+    <li>
+            <div class="add-skin-form">
+            <button type="button" onclick="openForm()">Adicionar Skin</button>
+            <div id="skinForm" style="display: none;">
+                <form action="/add-skin" method="POST">
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" name="produto" required>
+                <label for="link">Link:</label>
+                <input type="text" id="link" name="link" required>
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" name="preco" required>
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+                <button type="submit">Enviar</button>
+                </form>
+            </div>
+            </div>
+    </li>
+</ul>

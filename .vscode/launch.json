@@ -9,7 +9,21 @@
             "request": "launch",
             "name": "Gatry Test",
             "program": "${workspaceFolder}/app.js",
-            "runtimeExecutable": "/opt/homebrew/bin/node",
+            "runtimeExecutable": "/opt/homebrew/bin/node"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch with nodemon",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/app.js",
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            // "env": {
+            //     "PORT": "3100",
+            //     "MONGODB_URI": "mongodb://127.0.0.1:27017/gatry-skins-app"
+            // }
         }
     ]
 }
